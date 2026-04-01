@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cold Outreach Audit — prospect</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Mono:wght@400;500&family=Geist:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0e0e0e;--paper:#f5f2ec;--red:#c0392b;--gold:#b8860b;--muted:#6b6660;--border:#e0dbd3;--card:#ffffff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:'Geist',sans-serif;font-weight:300;min-height:100vh;padding:0}
+.wrapper{max-width:680px;margin:0 auto;padding:60px 24px 100px}
+.header{margin-bottom:56px;opacity:0;animation:fadeUp 0.6s ease forwards}
+.eyebrow{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--red);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.eyebrow::before{content:'';display:inline-block;width:24px;height:1px;background:var(--red)}
+h1{font-family:'Instrument Serif',serif;font-size:clamp(28px,5vw,40px);font-weight:400;line-height:1.2;color:var(--ink);margin-bottom:16px;letter-spacing:-0.02em}
+.subhead{font-size:15px;color:var(--muted);line-height:1.7;font-weight:300}
+.divider{border:none;border-top:1px solid var(--border);margin:40px 0}
+.section-label{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--muted);margin-bottom:24px}
+.gaps{display:flex;flex-direction:column;gap:16px;margin-bottom:40px}
+.gap-card{background:var(--card);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:2px 8px 8px 2px;padding:20px 24px;opacity:0;animation:fadeUp 0.5s ease forwards}
+.gap-card:nth-child(1){animation-delay:0.2s}
+.gap-card:nth-child(2){animation-delay:0.35s}
+.gap-card:nth-child(3){animation-delay:0.5s}
+.gap-number{font-family:'DM Mono',monospace;font-size:10px;color:var(--red);letter-spacing:0.1em;margin-bottom:8px}
+.gap-text{font-size:14px;line-height:1.75;color:#2a2a2a;font-weight:400}
+.cost-block{background:#fffbf0;border:1px solid #e8d98a;border-radius:8px;padding:24px;margin-bottom:40px;opacity:0;animation:fadeUp 0.5s ease 0.6s forwards}
+.cost-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.cost-text{font-size:14px;line-height:1.75;color:#3d3000;font-weight:400}
+.email-block{background:var(--card);border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:40px;opacity:0;animation:fadeUp 0.5s ease 0.7s forwards}
+.email-header{background:#f8f6f2;border-bottom:1px solid var(--border);padding:14px 20px;display:flex;align-items:center;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--border)}
+.dot:first-child{background:#ff6058}
+.dot:nth-child(2){background:#ffbd2e}
+.dot:nth-child(3){background:#28c941}
+.email-title-bar{font-family:'DM Mono',monospace;font-size:11px;color:var(--muted);margin-left:auto}
+.email-body-block{padding:24px}
+.email-subject-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.email-subject-text{font-family:'Instrument Serif',serif;font-size:18px;color:var(--ink);margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.email-copy{font-size:14px;line-height:1.85;color:#3a3a3a;white-space:pre-line;font-weight:300}
+.dm-block{background:#f0f4ff;border:1px solid #d0daff;border-radius:8px;padding:20px 24px;margin-bottom:40px;opacity:0;animation:fadeUp 0.5s ease 0.8s forwards}
+.dm-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:0.15em;text-transform:uppercase;color:#3b5bdb;margin-bottom:10px}
+.dm-text{font-size:14px;line-height:1.75;color:#1a2460;font-weight:400}
+.cta-block{text-align:center;padding:48px 24px;background:var(--ink);border-radius:12px;opacity:0;animation:fadeUp 0.5s ease 0.9s forwards}
+.cta-block h2{font-family:'Instrument Serif',serif;font-size:26px;font-weight:400;color:#fff;margin-bottom:12px;letter-spacing:-0.02em}
+.cta-block p{font-size:14px;color:#888;margin-bottom:28px;font-weight:300}
+.cta-btn{display:inline-block;background:var(--red);color:#fff;font-family:'Geist',sans-serif;font-size:14px;font-weight:500;padding:14px 36px;border-radius:6px;text-decoration:none}
+.cta-fine{margin-top:16px;font-size:12px;color:#555;font-family:'DM Mono',monospace}
+.footer{margin-top:60px;text-align:center;font-family:'DM Mono',monospace;font-size:11px;color:var(--border);letter-spacing:0.1em}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:600px){.wrapper{padding:40px 16px 80px}h1{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header">
+    <div class="eyebrow">Cold Outreach Audit · prospect</div>
+    <h1>Your prospect data is incomplete — unable to generate personalized outreach</h1>
+    <p class="subhead">Hi there, here's exactly where your outreach is losing replies — and what a better version looks like.</p>
+  </div>
+  <hr class="divider">
+  <p class="section-label">Where you're losing replies</p>
+  <div class="gaps">
+    <div class="gap-card"><div class="gap-number">GAP 01</div><div class="gap-text">Missing company name and homepage copy prevents competitive analysis</div></div>
+    <div class="gap-card"><div class="gap-number">GAP 02</div><div class="gap-text">No role or recent signal data limits personalization opportunities</div></div>
+    <div class="gap-card"><div class="gap-number">GAP 03</div><div class="gap-text">Empty hiring information eliminates growth-based messaging angles</div></div>
+  </div>
+  <div class="cost-block">
+    <div class="cost-label">What this is costing you</div>
+    <div class="cost-text">Generic outreach converts 97% lower than data-driven campaigns</div>
+  </div>
+  <hr class="divider">
+  <p class="section-label">Your email — rewritten</p>
+  <div class="email-block">
+    <div class="email-header"><div class="dot"></div><div class="dot"></div><div class="dot"></div><div class="email-title-bar">new message</div></div>
+    <div class="email-body-block">
+      <div class="email-subject-label">Subject</div>
+      <div class="email-subject-text">Quick question about [Company]</div>
+      <div class="email-copy">Hi [Name], I noticed [Company] is [doing something]. Most companies in your space struggle with [specific challenge]. We helped [similar company] achieve [specific result] in [timeframe]. Worth a 15-minute conversation? [Your name]</div>
+    </div>
+  </div>
+  <div class="dm-block">
+    <div class="dm-label">LinkedIn DM — alternative version</div>
+    <div class="dm-text">Hi [Name], saw [Recent Signal]. We solve [specific problem] for [similar companies]. Open to a quick chat?</div>
+  </div>
+  <div class="cta-block">
+    <h2>Want the full fix?</h2>
+    <p>20 minutes. We'll walk through exactly what to change and why.</p>
+    <a href="https://cal.com/PASTE_YOUR_CAL_LINK_HERE" class="cta-btn">Book a free audit call →</a>
+    <p class="cta-fine">or just reply to the email — no pressure</p>
+  </div>
+  <div class="footer">built for prospect · 1 April 2026</div>
+</div>
+</body>
+</html>
